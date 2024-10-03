@@ -17,7 +17,7 @@ export default function ProfilePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/users/profile-update', {
+      const response = await fetch(process.env.API_UR + '/api/users/profile-update', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

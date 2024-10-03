@@ -32,7 +32,7 @@ const Dashboard = () => {
   const handleSendRequest = async (_id) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/friends/send-request/${_id}`,
+        process.env.API_UR + `/api/friends/send-request/${_id}`,
         {},
         {
           headers: {
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   async function getProfile() {
     try {
-      const res = await fetch("http://localhost:8080/api/users/profile", {
+      const res = await fetch(process.env.API_UR + "/api/users/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${userToken}`,
@@ -93,7 +93,7 @@ const Dashboard = () => {
         const requestIds = await getProfile();
         
         const usersResponse = await axios.get(
-          "http://localhost:8080/api/users/get-users",
+          process.env.API_UR + "/api/users/get-users",
           {
             headers: {
               Authorization: `Bearer ${userToken}`,

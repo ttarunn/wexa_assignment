@@ -40,7 +40,13 @@ This web application aims to provide a rich set of features for user interaction
 
 ### 1. Initial Setup
 
-- Clone this repository to your local machine:
-  ```bash
-  git clone <repository-url>
-  cd <project-directory>
+For Backend
+
+cd wexa_assignment_backend
+npm install
+npm run start
+
+For Frontend
+cd wexa_assignment_frontend
+npm install
+npm run start

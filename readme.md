@@ -40,13 +40,16 @@ This web application aims to provide a rich set of features for user interaction
 
 ### 1. Initial Setup
 
-For Backend
+**For Backend:**
 
+```bash
 cd wexa_assignment_backend
 npm install
 npm run start
 
-For Frontend
+**For Frontend:**
+
+```bash
 cd wexa_assignment_frontend
 npm install
 npm run start

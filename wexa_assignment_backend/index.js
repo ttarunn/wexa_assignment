@@ -10,14 +10,16 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the methods you want to allow
-    credentials: true // Allow credentials (e.g., cookies, authorization headers)
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true 
 }));
 
+
 // Rate Limit for apis
-// app.use(rateLimit);
+app.use(rateLimit);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
